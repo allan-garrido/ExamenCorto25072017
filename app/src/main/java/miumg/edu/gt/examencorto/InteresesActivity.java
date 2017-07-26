@@ -34,22 +34,22 @@ public class InteresesActivity extends AppCompatActivity {
             String Android, Java, Spring;
 
             if (rb1.isChecked())
-                Android = rb1.getText().toString();
+                Android = " Android: " + rb1.getText().toString();
             else
-                Android = rb2.getText().toString();
+                Android = "";
             if (rb3.isChecked())
-                Java = rb3.getText().toString();
+                Java = " Java: " + rb3.getText().toString();
             else
-                Java = rb4.getText().toString();
+                Java = "";
             if (rb5.isChecked())
-                Spring = rb5.getText().toString();
+                Spring = " Spring: " + rb5.getText().toString();
             else
-                Spring = rb6.getText().toString();
+                Spring = "";
 
             Toast.makeText(this, "Preferencias listas para monitoreo" +
-                    " Android: " + Android +
-                    " Java: " + Java +
-                    " Spring: " + Spring, Toast.LENGTH_SHORT).show();
+                     Android +
+                     Java +
+                     Spring, Toast.LENGTH_SHORT).show();
         }
     }
 }
