@@ -30,7 +30,26 @@ public class InteresesActivity extends AppCompatActivity {
             Toast.makeText(this, "No ha elegido Java", Toast.LENGTH_SHORT).show();
         if(!rb5.isChecked()&&!rb6.isChecked())
             Toast.makeText(this, "No ha elegido Spring", Toast.LENGTH_SHORT).show();
-        else
-            Toast.makeText(this, "Preferencias listas para monitoreo", Toast.LENGTH_SHORT).show();
+        else {
+            String Android, Java, Spring;
+
+            if (rb1.isChecked())
+                Android = rb1.getText().toString();
+            else
+                Android = rb2.getText().toString();
+            if (rb3.isChecked())
+                Java = rb3.getText().toString();
+            else
+                Java = rb4.getText().toString();
+            if (rb5.isChecked())
+                Spring = rb5.getText().toString();
+            else
+                Spring = rb6.getText().toString();
+
+            Toast.makeText(this, "Preferencias listas para monitoreo" +
+                    " Android: " + Android +
+                    " Java: " + Java +
+                    " Spring: " + Spring, Toast.LENGTH_SHORT).show();
+        }
     }
 }
